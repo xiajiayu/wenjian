@@ -1,0 +1,2 @@
+/usr/bin/ar qc libcamera.a  CMakeFiles/camera.dir/Calibration.cpp.o CMakeFiles/camera.dir/RMVideoCapture.cpp.o CMakeFiles/camera.dir/RMCamera.cpp.o CMakeFiles/camera.dir/PNPsolver.cpp.o
+/usr/bin/ranlib libcamera.a
