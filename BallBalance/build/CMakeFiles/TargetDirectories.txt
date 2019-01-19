@@ -1,0 +1,3 @@
+/home/xiajiayu/文档/BallBalance/build/CMakeFiles/edit_cache.dir
+/home/xiajiayu/文档/BallBalance/build/CMakeFiles/rebuild_cache.dir
+/home/xiajiayu/文档/BallBalance/build/CMakeFiles/BallBalance.dir
