@@ -89,6 +89,21 @@
 		<Unit filename="/home/xiajiayu/文档/BallBalance/BallCenter.cpp">
 			<Option target="BallBalance"/>
 		</Unit>
+		<Unit filename="/home/xiajiayu/文档/BallBalance/BallCenter.h">
+			<Option target="BallBalance"/>
+		</Unit>
+		<Unit filename="/home/xiajiayu/文档/BallBalance/Header.h">
+			<Option target="BallBalance"/>
+		</Unit>
+		<Unit filename="/home/xiajiayu/文档/BallBalance/Main.cpp">
+			<Option target="BallBalance"/>
+		</Unit>
+		<Unit filename="/home/xiajiayu/文档/BallBalance/SerialPort.cpp">
+			<Option target="BallBalance"/>
+		</Unit>
+		<Unit filename="/home/xiajiayu/文档/BallBalance/SerialPort.h">
+			<Option target="BallBalance"/>
+		</Unit>
 		<Unit filename="/home/xiajiayu/文档/BallBalance/CMakeLists.txt">
 			<Option virtualFolder="CMake Files\"/>
 		</Unit>

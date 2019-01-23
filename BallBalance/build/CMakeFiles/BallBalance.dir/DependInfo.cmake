@@ -5,6 +5,8 @@ set(CMAKE_DEPENDS_LANGUAGES
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_CXX
   "/home/xiajiayu/文档/BallBalance/BallCenter.cpp" "/home/xiajiayu/文档/BallBalance/build/CMakeFiles/BallBalance.dir/BallCenter.cpp.o"
+  "/home/xiajiayu/文档/BallBalance/Main.cpp" "/home/xiajiayu/文档/BallBalance/build/CMakeFiles/BallBalance.dir/Main.cpp.o"
+  "/home/xiajiayu/文档/BallBalance/SerialPort.cpp" "/home/xiajiayu/文档/BallBalance/build/CMakeFiles/BallBalance.dir/SerialPort.cpp.o"
   )
 set(CMAKE_CXX_COMPILER_ID "GNU")
 

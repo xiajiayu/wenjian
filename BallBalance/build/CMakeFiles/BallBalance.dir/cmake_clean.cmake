@@ -1,5 +1,7 @@
 file(REMOVE_RECURSE
   "CMakeFiles/BallBalance.dir/BallCenter.cpp.o"
+  "CMakeFiles/BallBalance.dir/Main.cpp.o"
+  "CMakeFiles/BallBalance.dir/SerialPort.cpp.o"
   "BallBalance.pdb"
   "BallBalance"
 )

@@ -7,7 +7,7 @@ FIND_PACKAGE(OpenCV REQUIRED )
 
 INCLUDE_DIRECTORIES( ${OPENCV_INCLUDE_DIR} )
 
-ADD_EXECUTABLE(BallBalance BallCenter.cpp)
+ADD_EXECUTABLE(BallBalance BallCenter.cpp BallCenter.h Header.h Main.cpp SerialPort.h SerialPort.cpp )
 TARGET_LINK_LIBRARIES(BallBalance ${OpenCV_LIBS})
 
 

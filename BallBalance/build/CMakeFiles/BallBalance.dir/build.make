@@ -81,14 +81,66 @@ CMakeFiles/BallBalance.dir/BallCenter.cpp.o.provides: CMakeFiles/BallBalance.dir
 CMakeFiles/BallBalance.dir/BallCenter.cpp.o.provides.build: CMakeFiles/BallBalance.dir/BallCenter.cpp.o
 
 
+CMakeFiles/BallBalance.dir/Main.cpp.o: CMakeFiles/BallBalance.dir/flags.make
+CMakeFiles/BallBalance.dir/Main.cpp.o: ../Main.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/xiajiayu/文档/BallBalance/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/BallBalance.dir/Main.cpp.o"
+	/usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/BallBalance.dir/Main.cpp.o -c /home/xiajiayu/文档/BallBalance/Main.cpp
+
+CMakeFiles/BallBalance.dir/Main.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/BallBalance.dir/Main.cpp.i"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/xiajiayu/文档/BallBalance/Main.cpp > CMakeFiles/BallBalance.dir/Main.cpp.i
+
+CMakeFiles/BallBalance.dir/Main.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/BallBalance.dir/Main.cpp.s"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/xiajiayu/文档/BallBalance/Main.cpp -o CMakeFiles/BallBalance.dir/Main.cpp.s
+
+CMakeFiles/BallBalance.dir/Main.cpp.o.requires:
+
+.PHONY : CMakeFiles/BallBalance.dir/Main.cpp.o.requires
+
+CMakeFiles/BallBalance.dir/Main.cpp.o.provides: CMakeFiles/BallBalance.dir/Main.cpp.o.requires
+	$(MAKE) -f CMakeFiles/BallBalance.dir/build.make CMakeFiles/BallBalance.dir/Main.cpp.o.provides.build
+.PHONY : CMakeFiles/BallBalance.dir/Main.cpp.o.provides
+
+CMakeFiles/BallBalance.dir/Main.cpp.o.provides.build: CMakeFiles/BallBalance.dir/Main.cpp.o
+
+
+CMakeFiles/BallBalance.dir/SerialPort.cpp.o: CMakeFiles/BallBalance.dir/flags.make
+CMakeFiles/BallBalance.dir/SerialPort.cpp.o: ../SerialPort.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/xiajiayu/文档/BallBalance/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/BallBalance.dir/SerialPort.cpp.o"
+	/usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/BallBalance.dir/SerialPort.cpp.o -c /home/xiajiayu/文档/BallBalance/SerialPort.cpp
+
+CMakeFiles/BallBalance.dir/SerialPort.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/BallBalance.dir/SerialPort.cpp.i"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/xiajiayu/文档/BallBalance/SerialPort.cpp > CMakeFiles/BallBalance.dir/SerialPort.cpp.i
+
+CMakeFiles/BallBalance.dir/SerialPort.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/BallBalance.dir/SerialPort.cpp.s"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/xiajiayu/文档/BallBalance/SerialPort.cpp -o CMakeFiles/BallBalance.dir/SerialPort.cpp.s
+
+CMakeFiles/BallBalance.dir/SerialPort.cpp.o.requires:
+
+.PHONY : CMakeFiles/BallBalance.dir/SerialPort.cpp.o.requires
+
+CMakeFiles/BallBalance.dir/SerialPort.cpp.o.provides: CMakeFiles/BallBalance.dir/SerialPort.cpp.o.requires
+	$(MAKE) -f CMakeFiles/BallBalance.dir/build.make CMakeFiles/BallBalance.dir/SerialPort.cpp.o.provides.build
+.PHONY : CMakeFiles/BallBalance.dir/SerialPort.cpp.o.provides
+
+CMakeFiles/BallBalance.dir/SerialPort.cpp.o.provides.build: CMakeFiles/BallBalance.dir/SerialPort.cpp.o
+
+
 # Object files for target BallBalance
 BallBalance_OBJECTS = \
-"CMakeFiles/BallBalance.dir/BallCenter.cpp.o"
+"CMakeFiles/BallBalance.dir/BallCenter.cpp.o" \
+"CMakeFiles/BallBalance.dir/Main.cpp.o" \
+"CMakeFiles/BallBalance.dir/SerialPort.cpp.o"
 
 # External object files for target BallBalance
 BallBalance_EXTERNAL_OBJECTS =
 
 BallBalance: CMakeFiles/BallBalance.dir/BallCenter.cpp.o
+BallBalance: CMakeFiles/BallBalance.dir/Main.cpp.o
+BallBalance: CMakeFiles/BallBalance.dir/SerialPort.cpp.o
 BallBalance: CMakeFiles/BallBalance.dir/build.make
 BallBalance: /usr/local/lib/libopencv_stitching.so.3.4.4
 BallBalance: /usr/local/lib/libopencv_superres.so.3.4.4
@@ -108,7 +160,7 @@ BallBalance: /usr/local/lib/libopencv_imgcodecs.so.3.4.4
 BallBalance: /usr/local/lib/libopencv_imgproc.so.3.4.4
 BallBalance: /usr/local/lib/libopencv_core.so.3.4.4
 BallBalance: CMakeFiles/BallBalance.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/xiajiayu/文档/BallBalance/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Linking CXX executable BallBalance"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/xiajiayu/文档/BallBalance/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Linking CXX executable BallBalance"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/BallBalance.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
@@ -117,6 +169,8 @@ CMakeFiles/BallBalance.dir/build: BallBalance
 .PHONY : CMakeFiles/BallBalance.dir/build
 
 CMakeFiles/BallBalance.dir/requires: CMakeFiles/BallBalance.dir/BallCenter.cpp.o.requires
+CMakeFiles/BallBalance.dir/requires: CMakeFiles/BallBalance.dir/Main.cpp.o.requires
+CMakeFiles/BallBalance.dir/requires: CMakeFiles/BallBalance.dir/SerialPort.cpp.o.requires
 
 .PHONY : CMakeFiles/BallBalance.dir/requires
 
