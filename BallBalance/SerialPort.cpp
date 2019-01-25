@@ -94,11 +94,11 @@ bool SerialCom::open_port()
     fd = init();
     if (fd > 0)
     {
-        std::cout<<"T";
+        std::cout<<"T\n";
         return true;
     }
     else
-    {   std::cout<<"F";
+    {   std::cout<<"F\n";
         return false;
     }
 }
@@ -109,7 +109,7 @@ int SerialCom::send(unsigned char *str, int len)
     return n;
 }
 void SerialCom::getdata(){
-    open_port();
+
     sendata[0] = '!';//数据头1
 
 //将double x,y,z依次转成byte类型
@@ -120,6 +120,7 @@ void SerialCom::getdata(){
 
 //发送到串口并检查是否发送成功
     int nr;
+    //open_port();
     nr = send(sendata,9);
     std:: cout<<sendata;
     if (nr > 0) printf("send data to uart success! nr=%d\n", nr);
@@ -127,7 +128,7 @@ void SerialCom::getdata(){
 }
 void SerialCom::double2byte(BYTE *hexdata, double ddata)
 {
-    unsigned char str[128];
+    unsigned char str[255];
     sprintf((char*)str, "%f", ddata);
     hexdata[0] = str[0];
     hexdata[1] = str[1];

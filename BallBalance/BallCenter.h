@@ -20,11 +20,11 @@ private:
     void FindContours(Mat&Image, Mat&ContourImage);
 public:
     Point2f centerPoint=Point2f(32.5,32.5);
-    bool update=false;
+    bool update=true;
 private:
-    int lowH = 151, highH = 183, lowS = 31, highS = 255, lowV = 50, highV = 255;
-    float Rwidth=408 ,RHeight = 409;
-    Point2f dst_vertices[4]={Point2f(116,454),Point2f(116,45),Point2f(524,45),Point2f(524,454)};
+    int lowH = 155, highH = 185, lowS = 34, highS = 255, lowV = 46, highV = 255;
+    float Rwidth=396 ,RHeight = 397;
+    Point2f dst_vertices[4]={Point2f(120,427),Point2f(120,30),Point2f(516,30),Point2f(516,427)};
 
 
 };

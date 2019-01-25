@@ -29,17 +29,11 @@ BallCenter::BallCenter() {};
 
 		Mat ContourImg = src.clone();
 		/*namedWindow("Hsv", 0);
-
 		createTrackbar("LH", "Hsv", &lowH, 255, segmentImg);
-
 		createTrackbar("HH", "Hsv", &highH, 255, segmentImg);
-
 		createTrackbar("LS", "Hsv", &lowS, 255, segmentImg);
-
 		createTrackbar("HS", "Hsv", &highS, 255, segmentImg);
-
 		createTrackbar("LV", "Hsv", &lowV, 255, segmentImg);
-
 		createTrackbar("HV", "Hsv", &highV, 255, segmentImg);*/
 
 		segmentImg(src,dst);
@@ -124,7 +118,10 @@ void BallCenter::FindContours(Mat &Image, Mat &ContourImage) {
 
 	//drawContours(ContourImage, contours, -1, Scalar(255, 0, 0), 2, 8, hierarcy);
 
-	if (contours.size() != 2)return;
+	if (contours.size() != 2){
+	    update=false;
+	    return;
+	}
 
 	//绘制外接矩形
 
@@ -296,7 +293,6 @@ void BallCenter::visual_point(Mat src, vector<Point2f> point_image)
     //imshow("point", src);
     //imwrite("point.png", src);
 }
-
 
 
 
