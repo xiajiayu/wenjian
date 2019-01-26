@@ -29,11 +29,17 @@ BallCenter::BallCenter() {};
 
 		Mat ContourImg = src.clone();
 		/*namedWindow("Hsv", 0);
+
 		createTrackbar("LH", "Hsv", &lowH, 255, segmentImg);
+
 		createTrackbar("HH", "Hsv", &highH, 255, segmentImg);
+
 		createTrackbar("LS", "Hsv", &lowS, 255, segmentImg);
+
 		createTrackbar("HS", "Hsv", &highS, 255, segmentImg);
+
 		createTrackbar("LV", "Hsv", &lowV, 255, segmentImg);
+
 		createTrackbar("HV", "Hsv", &highV, 255, segmentImg);*/
 
 		segmentImg(src,dst);
@@ -57,7 +63,7 @@ BallCenter::BallCenter() {};
      namedWindow("Contours", 1);
 
      imshow("Contours", ContourImg);
-     DrawCircle(warped);
+	DrawCircle(warped);
 
 }
 
@@ -119,10 +125,7 @@ void BallCenter::FindContours(Mat &Image, Mat &ContourImage) {
 
 	//drawContours(ContourImage, contours, -1, Scalar(255, 0, 0), 2, 8, hierarcy);
 
-	if (contours.size() != 2){
-	    update=false;
-	    return;
-	}
+	if (contours.size() != 2)return;
 
 	//绘制外接矩形
 
@@ -138,7 +141,7 @@ void BallCenter::FindContours(Mat &Image, Mat &ContourImage) {
 	float CX = 0;
 
 	float CY = 0;
-	Point2f pointFirst;
+	//Point2f pointFirst;
 	Point2f pointZero;
 
 	for (int i = 0; i < contours.size(); i++) {
@@ -300,17 +303,17 @@ void BallCenter::DrawCircle(Mat&warped){
      float Rx=Rwidth/65;
      float Ry=RHeight/65;
      vector<Point2f>Point;
-     Point.push_back(Point2f(12.5*Rx,12.5*Ry));
-    Point.push_back(Point2f(32.5*Rx,12.5*Ry));
-    Point.push_back(Point2f(52.5*Rx,12.5*Ry));
-    Point.push_back(Point2f(12.5*Rx,32.5*Ry));
-    Point.push_back(Point2f(32.5*Rx,32.5*Ry));
-    Point.push_back(Point2f(52.5*Rx,32.5*Ry));
-    Point.push_back(Point2f(12.5*Rx,52.5*Ry));
-    Point.push_back(Point2f(32.5*Rx,52.5*Ry));
-    Point.push_back(Point2f(52.5*Rx,52.5*Ry));
+     Point.push_back(Point2f(12.5*Rx+pointFirst.x,12.5*Ry+pointFirst.y));
+    Point.push_back(Point2f(32.5*Rx+pointFirst.x,12.5*Ry+pointFirst.y));
+    Point.push_back(Point2f(52.5*Rx+pointFirst.x,12.5*Ry+pointFirst.y));
+    Point.push_back(Point2f(12.5*Rx+pointFirst.x,32.5*Ry+pointFirst.y));
+    Point.push_back(Point2f(32.5*Rx+pointFirst.x,32.5*Ry+pointFirst.y));
+    Point.push_back(Point2f(52.5*Rx+pointFirst.x,32.5*Ry+pointFirst.y));
+    Point.push_back(Point2f(12.5*Rx+pointFirst.x,52.5*Ry+pointFirst.y));
+    Point.push_back(Point2f(32.5*Rx+pointFirst.x,52.5*Ry+pointFirst.y));
+    Point.push_back(Point2f(52.5*Rx+pointFirst.x,52.5*Ry+pointFirst.y));
     for(int i=0;i<Point.size();i++){
-       circle(warped,Point[i],3*Rx,Scalar(255,0,0));
+       circle(warped,Point[i],2.25*Rx,Scalar(0,0,0,2));
 
     }
 
@@ -320,7 +323,6 @@ void BallCenter::DrawCircle(Mat&warped){
 
 
 }
-
 
 
 
