@@ -29,17 +29,11 @@ BallCenter::BallCenter() {};
 
 		Mat ContourImg = src.clone();
 		/*namedWindow("Hsv", 0);
-
 		createTrackbar("LH", "Hsv", &lowH, 255, segmentImg);
-
 		createTrackbar("HH", "Hsv", &highH, 255, segmentImg);
-
 		createTrackbar("LS", "Hsv", &lowS, 255, segmentImg);
-
 		createTrackbar("HS", "Hsv", &highS, 255, segmentImg);
-
 		createTrackbar("LV", "Hsv", &lowV, 255, segmentImg);
-
 		createTrackbar("HV", "Hsv", &highV, 255, segmentImg);*/
 
 		segmentImg(src,dst);
@@ -53,8 +47,10 @@ BallCenter::BallCenter() {};
      src_vertices[1] = point_img[1];
      src_vertices[2] = point_img[2];
      src_vertices[3] = point_img[3];
-     //透视变换
+ 
+     //透视变换 
      Mat warpMatrix = getPerspectiveTransform(src_vertices, dst_vertices);
+	First=dst_vertices[1];
      Mat warped;
      warpPerspective(dst, warped, warpMatrix, warped.size(), INTER_LINEAR, BORDER_CONSTANT);
      imshow("warped",warped);
@@ -63,6 +59,7 @@ BallCenter::BallCenter() {};
      namedWindow("Contours", 1);
 
      imshow("Contours", ContourImg);
+     DrawCircle(warped);
 
 }
 
@@ -124,7 +121,10 @@ void BallCenter::FindContours(Mat &Image, Mat &ContourImage) {
 
 	//drawContours(ContourImage, contours, -1, Scalar(255, 0, 0), 2, 8, hierarcy);
 
-	if (contours.size() != 2)return;
+	if (contours.size() != 2){
+	    update=false;
+	    return;
+	}
 
 	//绘制外接矩形
 
@@ -177,8 +177,7 @@ void BallCenter::FindContours(Mat &Image, Mat &ContourImage) {
 
 		height = boundRect[1].height;
 
-		pointFirst = RectPoint[1][0];
-
+		pointFirst=RectPoint[1][0];
 		//判断中心点
 
 		CX = (RectPoint[0][0].x + RectPoint[0][1].x) / 2.0;
@@ -197,7 +196,7 @@ void BallCenter::FindContours(Mat &Image, Mat &ContourImage) {
 
 		height = boundRect[0].height;
 
-		pointFirst = RectPoint[0][0];
+		pointFirst=RectPoint[0][0];
 
 		//判断中心点
 
@@ -298,6 +297,30 @@ void BallCenter::visual_point(Mat src, vector<Point2f> point_image)
 }
 
 
+void BallCenter::DrawCircle(Mat&warped){
+     float Rx=Rwidth/65;
+     float Ry=RHeight/65;
+     vector<Point2f>Point;
+     Point.push_back(Point2f(12.5*Rx+First.x,12.5*Ry+First.y));
+    Point.push_back(Point2f(32.5*Rx+First.x,12.5*Ry+First.y));
+    Point.push_back(Point2f(52.5*Rx+First.x,12.5*Ry+First.y));
+    Point.push_back(Point2f(12.5*Rx+First.x,32.5*Ry+First.y));
+    Point.push_back(Point2f(32.5*Rx+First.x,32.5*Ry+First.y));
+    Point.push_back(Point2f(52.5*Rx+First.x,32.5*Ry+First.y));
+    Point.push_back(Point2f(12.5*Rx+First.x,52.5*Ry+First.y));
+    Point.push_back(Point2f(32.5*Rx+First.x,52.5*Ry+First.y));
+    Point.push_back(Point2f(52.5*Rx+First.x,52.5*Ry+First.y));
+    for(int i=0;i<Point.size();i++){
+       circle(warped,Point[i],2.25*Rx,Scalar(0,0,0,2));
+
+    }
+
+    namedWindow("Cirle",1);
+    imshow("Cirle",warped);
+
+
+
+}
 
 
 

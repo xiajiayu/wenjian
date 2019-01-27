@@ -6,6 +6,18 @@
 
 #IncludeRegexTransform: 
 
+/home/xiajiayu/文档/BallBalance/BallCenter.cpp
+opencv2/highgui.hpp
+/home/xiajiayu/文档/BallBalance/opencv2/highgui.hpp
+opencv2/highgui.hpp
+/home/xiajiayu/文档/BallBalance/opencv2/highgui.hpp
+opencv2/imgproc.hpp
+/home/xiajiayu/文档/BallBalance/opencv2/imgproc.hpp
+iostream
+-
+BallCenter.h
+/home/xiajiayu/文档/BallBalance/BallCenter.h
+
 /home/xiajiayu/文档/BallBalance/BallCenter.h
 Header.h
 /home/xiajiayu/文档/BallBalance/Header.h
@@ -21,6 +33,10 @@ Header.h
 /home/xiajiayu/文档/BallBalance/Header.h
 BallCenter.h
 /home/xiajiayu/文档/BallBalance/BallCenter.h
+SerialPort.h
+/home/xiajiayu/文档/BallBalance/SerialPort.h
+
+/home/xiajiayu/文档/BallBalance/SerialPort.cpp
 SerialPort.h
 /home/xiajiayu/文档/BallBalance/SerialPort.h
 
